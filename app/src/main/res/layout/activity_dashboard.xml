@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:elevation="0dp"
+            android:minHeight="?attr/actionBarSize"
+            app:elevation="0dp">
+
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center_vertical|bottom"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="28dp"-->
+<!--                            android:layout_height="28dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/ic_home_dashboard" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="10dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:orientation="vertical">-->
+
+
+
+
+
+<!--                            &lt;!&ndash;                        <TextView&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:id="@+id/textView"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:fontFamily="@font/sf_pro_semi_bold"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:text="&#45;&#45;"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:textColor="@android:color/black"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:textSize="15sp"/>&ndash;&gt;-->
+
+
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/user_name"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:fontFamily="@font/sf_pro_semi_bold"-->
+<!--                                android:text=""-->
+<!--                                android:textColor="@android:color/black"-->
+<!--                                android:textSize="16sp"/>-->
+
+<!--                            &lt;!&ndash;                        <TextView&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:id="@+id/address_textView"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:ellipsize="end"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:fontFamily="@font/sf_pro_medium"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:maxLines="1"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:text="&#45;&#45;"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:textColor="#818181"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            android:textSize="12sp" />&ndash;&gt;-->
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginRight="15dp"-->
+<!--                            android:layout_weight="2.5"-->
+<!--                            android:gravity="right"-->
+<!--                            android:orientation="horizontal">-->
+
+
+<!--                        </LinearLayout>-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--            </androidx.appcompat.widget.Toolbar>-->
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <LinearLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_below="@id/action_bar"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/edit_text_box"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_baseline_search"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/search_textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:background="@null"
+                android:fontFamily="@font/sf_pro_semi_bold"
+                android:gravity="center_vertical"
+                android:hint="Search for your favourite movies"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="#9D3F3F42"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+<!--                <com.synnapps.carouselview.CarouselView-->
+<!--                    android:id="@+id/offer_carousel_view"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="150dp"-->
+<!--                    android:layout_marginLeft="15dp"-->
+<!--                    android:layout_marginTop="7dp"-->
+<!--                    android:layout_marginRight="15dp"-->
+<!--                    app:slideInterval="3000"-->
+<!--                    app:strokeColor="#FF777777"-->
+<!--                    app:strokeWidth="1dp" />-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="18dp"-->
+<!--                    android:orientation="vertical">-->
+
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="15dp"-->
+<!--                        android:fontFamily="@font/sf_pro_semi_bold"-->
+<!--                        android:text="Categories"-->
+<!--                        android:textColor="#3E3D3D"-->
+<!--                        android:textSize="18sp" />-->
+
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/categories_recyclerView"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_vertical" />-->
+
+
+<!--                </LinearLayout>-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_semi_bold"
+                            android:text="Recommended Movies "
+                            android:textColor="#3E3D3D"
+                            android:textSize="18sp" />
+
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/no_shops_text_view"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Currently no shops available"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/sf_pro_semi_bold"
+                        android:textColor="#818181"
+                        />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/movies_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:nestedScrollingEnabled="false" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
